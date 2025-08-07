@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #FAFBFC; /* gray-50 */
+    --color-foreground: #202124; /* gray-900 */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #202124; /* gray-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #202124; /* gray-900 */
+    --color-muted: #F8F9FA; /* gray-100 */
+    --color-muted-foreground: #5F6368; /* gray-600 */
+    
+    /* Interactive Colors */
+    --color-primary: #4285F4; /* blue-500 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #F8F9FA; /* gray-100 */
+    --color-secondary-foreground: #202124; /* gray-900 */
+    --color-accent: #F8F9FA; /* gray-100 */
+    --color-accent-foreground: #202124; /* gray-900 */
+    
+    /* Status Colors */
+    --color-success: #34A853; /* green-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F9AB00; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #EA4335; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #D93025; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* UI Elements */
+    --color-border: rgba(0, 0, 0, 0.12); /* black with opacity */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #4285F4; /* blue-500 */
+    
+    /* Text Colors */
+    --color-text-primary: #202124; /* gray-900 */
+    --color-text-secondary: #5F6368; /* gray-600 */
+    --color-success-text: #137333; /* green-700 */
+    --color-error-text: #D93025; /* red-600 */
+    
+    /* Radius */
+    --radius: 8px;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transition-smooth {
+    transition: all 150ms ease-out;
+  }
+  
+  .transition-spring {
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
